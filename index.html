@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Barcode Generator</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class='bx bx-barcode'></i> Barcode Generator</h1>
+            <p>Generate professional barcodes in multiple formats</p>
+        </div>
+
+        <form id="barcodeForm" class="barcode-form">
+            <div class="form-group">
+                <label for="barcodeText">Enter Text or Number</label>
+                <input type="text" id="barcodeText" class="form-control" 
+                       placeholder="Enter the text you want to encode..." required>
+            </div>
+
+            <div class="form-group">
+                <label>Select Barcode Format</label>
+                <div class="format-grid">
+                    <div class="format-option">
+                        <input type="radio" id="code128" name="format" value="code128" checked>
+                        <label for="code128">Code 128</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" id="code39" name="format" value="code39">
+                        <label for="code39">Code 39</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" id="ean13" name="format" value="ean13">
+                        <label for="ean13">EAN-13</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" id="ean8" name="format" value="ean8">
+                        <label for="ean8">EAN-8</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" id="upca" name="format" value="upca">
+                        <label for="upca">UPC-A</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" id="isbn13" name="format" value="isbn13">
+                        <label for="isbn13">ISBN-13</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="format-info">
+                <h3>Format Information</h3>
+                <div class="format-descriptions">
+                    <div class="format-desc">
+                        <strong>Code 128:</strong> Universal format supporting letters, numbers, and symbols. Great for general use.
+                    </div>
+                    <div class="format-desc">
+                        <strong>Code 39:</strong> Alphanumeric format supporting uppercase letters and numbers. Widely used in industry.
+                    </div>
+                    <div class="format-desc">
+                        <strong>EAN-13:</strong> International product barcode (13 digits). Used for retail products worldwide.
+                    </div>
+                    <div class="format-desc">
+                        <strong>EAN-8:</strong> Compact version of EAN-13 (8 digits). Used for small retail products.
+                    </div>
+                    <div class="format-desc">
+                        <strong>UPC-A:</strong> North American product barcode (12 digits). Standard for US/Canada retail.
+                    </div>
+                    <div class="format-desc">
+                        <strong>ISBN-13:</strong> Book identification number (13 digits). Used for book publishing industry.
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn generate-btn">
+                <i class='bx bx-play-circle'></i> Generate Barcode
+            </button>
+        </form>
+
+        <div class="features-section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bx-qr-scan'></i></div>
+                    <h3>Multiple Formats</h3>
+                    <p>Support for Code 128, Code 39, EAN-13, EAN-8, UPC-A, and ISBN-13 barcode formats.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bxs-zap'></i></div>
+                    <h3>Fast Generation</h3>
+                    <p>Instant barcode creation with high-quality output and professional appearance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bx-mobile-alt'></i></div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Responsive design that works perfectly on desktop, tablet, and mobile devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bx-palette'></i></div>
+                    <h3>Beautiful Design</h3>
+                    <p>Modern, clean interface with smooth animations and professional styling.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bxs-lock'></i></div>
+                    <h3>Secure & Private</h3>
+                    <p>All processing happens locally. Your data never leaves your device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class='bx bx-download'></i></div>
+                    <h3>Download Ready</h3>
+                    <p>Generated barcodes can be downloaded as high-quality PNG images.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="usage-guide">
+            <h2>How to Use</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Enter Your Data</h3>
+                        <p>Type the text or number you want to encode into the input field.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Choose Format</h3>
+                        <p>Select the appropriate barcode format based on your needs.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Generate</h3>
+                        <p>Click the generate button to create your professional barcode.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Download</h3>
+                        <p>Download the generated barcode as a PNG image for use in your projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-placeholder">
+            <h2>Generated Barcode</h2>
+            <div class="barcode-display-placeholder">
+                <div class="placeholder-barcode">
+                    <div class="barcode-lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line thick"></div>
+                    </div>
+                    <div class="placeholder-text">SAMPLE BARCODE</div>
+                </div>
+            </div>
+            
+            <div class="barcode-info-placeholder">
+                <div class="info-item">
+                    <div class="label">Format</div>
+                    <div class="value">CODE 128</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">Text</div>
+                    <div class="value">Sample Text</div>
+                </div>
+            </div>
+
+            <button class="btn download-btn">
+                <i class='bx bx-download'></i> Download Barcode
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Barcode Generator. A modern tool for creating professional barcodes.</p>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#usage">Usage Guide</a>
+                <a href="#formats">Formats</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
